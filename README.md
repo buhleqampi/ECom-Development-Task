@@ -1,6 +1,4 @@
-Theme Setup using Shopify CLI (Windows):
-Installing Required Technologies:
-Check installed versions:
+Theme Setup using Shopify CLI (Windows): Installing Required Technologies: Check installed versions:
 git --version
 ruby --version
 node --version
