@@ -297,7 +297,7 @@
 
     {% sections 'header-group' %}
 
-    {% section 'feature-section' %}
+    {% section 'feature-product' %}
 
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
@@ -357,7 +357,7 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% include 'feature-flipper.liquid' %}
+    {include 'feature-flipper.html' }
 
   </body>
 </html>

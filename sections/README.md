@@ -15,6 +15,22 @@ Choose theme and place liquid files in your folder.
 Initialize Git repository: git init 
 Regularly push changes to Git.
 
+To check there are errors and analyze your theme code for errors and to ensure that it follows theme and Liquid best practices:
+shopify theme check
+
+To upload the current theme to a store so you can preview it:
+shopify theme dev
+
+ Preview your theme                                                          │
+│    • http://127.0.0.1:9292 [1]                                               │
+│                                                                              │
+│  Next steps                                                                  │
+│    • Customize your theme at the theme editor [2] https://ecom-development-task.myshopify.com/admin/themes/140866289903/editor                           │
+│    • Share your theme preview [3] (https://ecom-development-task.myshopify.  │
+│      com/?preview_theme_id=140866289903)                                     │
+│
+
+The visitors password is botsog
 <!-- A summary of the changes made to the theme. -->
 Summary of Theme Changes: Added and customized theme from library. 
 Added a featured product.

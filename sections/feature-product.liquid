@@ -29,16 +29,18 @@
 {% endschema %}
 
 <div class="feature-section">
-  {% if settings.product %}
-    {% assign product = settings.product %}
+  {% if settings.select_product %}
+    {% assign product = settings.select_product %}
     <img src="{{ product.featured_image.src | image_url: '600px' }}" alt="{{ product.title }}" width="200px" height="100px">
     <h2>{{ product.title }}</h2>
     <ul>
-      {% for point in section.settings.feature_points | split: '\n' %}
+      {% assign points_array = section.settings.feature_points | newline_to_br | split: '<br>' %}
+      {% for point in points_array %}
         <li>{{ point }}</li>
       {% endfor %}
     </ul>
     <a href="{{ product.url }}" class="cta-button">{{ settings.cta_text }}</a>
   {% endif %}
 </div>
+
 
