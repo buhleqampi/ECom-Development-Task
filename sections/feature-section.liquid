@@ -31,7 +31,7 @@
 <div class="feature-section">
   {% if settings.product %}
     {% assign product = settings.product %}
-    <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="{{ product.title }}" width="100px" height="100px">
+    <img src="{{ product.featured_image.src | image_url: '600px' }}" alt="{{ product.title }}" width="200px" height="100px">
     <h2>{{ product.title }}</h2>
     <ul>
       {% for point in section.settings.feature_points | split: '\n' %}

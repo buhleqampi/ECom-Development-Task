@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -280,6 +282,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    <script src="{{ 'feature-flipper.js' | asset_url }}" defer></script>
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -292,6 +296,9 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+
+    {% section 'feature-section' %}
+
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -349,5 +356,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% include 'feature-flipper.liquid' %}
+
   </body>
 </html>
