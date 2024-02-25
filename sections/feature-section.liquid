@@ -1,0 +1,44 @@
+
+{% schema %}
+{
+  "name": "Feature Section",
+  "settings": [
+    {
+      "type": "product",
+      "label": "Select Product",
+      "id": "select-product"
+    },
+    {
+      "type": "text",
+      "label": "CTA Button Text",
+      "id": "cta_text"
+    },
+    {
+      "type": "textarea",
+      "label": "Feature Points",
+      "id": "feature_points"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="feature-section">
+  {% if settings.product %}
+    {% assign product = settings.product %}
+    <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="{{ product.title }}" width="100px" height="100px">
+    <h2>{{ product.title }}</h2>
+    <ul>
+      {% for point in section.settings.feature_points | split: '\n' %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ product.url }}" class="cta-button">{{ settings.cta_text }}</a>
+  {% endif %}
+</div>
+

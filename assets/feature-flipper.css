@@ -1,0 +1,24 @@
+
+
+    .feature-flipper {
+        overflow: hidden;
+    }
+    
+    .feature-points {
+        display: flex;
+        animation: flipPoints 5s infinite alternate;
+    }
+    
+    .feature-point {
+        flex: 0 0 100%;
+    }
+    
+    @keyframes flipPoints {
+        0%, 100% {
+        transform: translateY(0);
+        }
+    
+        50% {
+        transform: translateY(-100%);
+        }
+    }
